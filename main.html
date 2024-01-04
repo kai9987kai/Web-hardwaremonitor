@@ -127,5 +127,102 @@
         });
     </script>
     <script src="styles.js"></script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Modern font styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Button styles */
+        .popup-button {
+            display: block;
+            position: fixed;
+            bottom: 1 inch;
+            left: 1 inch;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        /* Styles for the pop-up */
+        .popup-container {
+            display: none;
+            position: fixed;
+            bottom: 2 inches;
+            left: 2 inches;
+            width: 600px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 9998;
+        }
+
+        /* Styles for the close button */
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Optional: Add more styles for your pop-up content */
+    </style>
+</head>
+<body>
+    <!-- Toggle button to open/close the pop-up -->
+    <button class="popup-button" onclick="togglePopup()">Toggle Hardware Info</button>
+
+    <!-- Pop-up container -->
+    <div class="popup-container" id="popup">
+        <button class="close-button" onclick="closePopup()">Close</button>
+        <!-- Add your pop-up content here -->
+    </div>
+
+    <script>
+        let popupOpen = false;
+        const popup = document.getElementById("popup");
+
+        function togglePopup() {
+            if (popupOpen) {
+                closePopup();
+            } else {
+                openPopup();
+            }
+        }
+
+        function openPopup() {
+            popup.style.display = "block";
+            popupOpen = true;
+
+            // Populate the pop-up with hardware information
+            // Replace with your actual hardware information
+        }
+
+        function closePopup() {
+            popup.style.display = "none";
+            popupOpen = false;
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
