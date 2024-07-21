@@ -108,11 +108,18 @@
             position: relative;
         }
         .close-button {
-            position: absolute;
+            position: fixed;
             top: 10px;
-            right: 10px;
-            font-size: 24px;
+            left: 10px; /* Changed from right to left */
+
+            right: 900px;
+            font-size: 15px;
             cursor: pointer;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
         }
     </style>
 </head>
@@ -121,7 +128,7 @@
     
     <div class="popup" id="dashboardPopup">
         <div class="popup-content">
-            <span class="close-button" onclick="togglePopup()">&times;</span>
+            <button class="close-button" onclick="togglePopup()">Close</button>
             <button class="mode-switch" onclick="toggleMode()">🌓 Toggle Dark/Light Mode</button>
             <div class="dashboard">
                 <div class="card">
@@ -400,11 +407,11 @@
             const pageLoadTime = Math.round(performance.now());
             document.getElementById("PageLoadTimeState").textContent = `${pageLoadTime} ms`;
 
-            if (navigator.connection) {
+if (navigator.connection) {
                 document.getElementById("NetworkTypeState").textContent = navigator.connection.effectiveType || "Unknown";
             }
-			document.getElementById("OnlineStatusState").textContent = navigator.onLine ? "Online" : "Offline";
 
+            document.getElementById("OnlineStatusState").textContent = navigator.onLine ? "Online" : "Offline";
 
             // Update cookie information
             updateCookieInfo();
