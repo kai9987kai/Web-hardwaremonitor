@@ -206,13 +206,9 @@
 
         // Get exact RAM
         function getExactRAM() {
-            if ('memory' in navigator) {
-                const ramGB = navigator.deviceMemory;
-                document.getElementById('ramSpec').textContent = `${ramGB} GB`;
-            } else {
-                document.getElementById('ramSpec').textContent = 'Unable to determine';
-            }
-        }
+        const ramInfo = navigator.deviceMemory ? navigator.deviceMemory + " GB" : "Information not available";
+        document.getElementById('ramSpec').textContent = ramInfo;
+    }
         getExactRAM();
 
         // Animate system specs
