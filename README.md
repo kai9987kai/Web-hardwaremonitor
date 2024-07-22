@@ -13,6 +13,7 @@ The Task Manager Dashboard is a web-based tool that provides real-time informati
 - Website States (Page Load Time, Network Type, Online Status)
 - Dark/Light Mode Toggle
 - Popup Functionality
+- Battery Information
 
 ## Installation
 1. Clone this repository or download the HTML file.
