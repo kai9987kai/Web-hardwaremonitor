@@ -2,7 +2,6 @@
 
 ## Overview
 The Task Manager Dashboard is a web-based tool that provides real-time information about system performance and various web-related metrics. It's designed to give users a comprehensive view of their system's status, all within their web browser.
-### The information about ram may not work on this new build but look back to previous builds for working version.
 ## Features
 - System Specifications Display
 - Real-time CPU Usage Graph
